@@ -24,24 +24,30 @@ body {
 .container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap; /* Prevents layout breaking on small screens */
 }
 .sidebar {
     width: 20%;
     padding: 10px;
-    background: #eee;
+    background: #ff0000;
+    flex-shrink: 0; /* Prevents sidebar from shrinking */
 }
 .main-content {
     width: 80%;
     padding: 20px;
+    flex-shrink: 0; /* Prevents main content from shrinking */
 }
 .image-box {
     width: 200px;
     height: 200px;
     border: 1px solid black;
-    text-align: center;
-    line-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
 }
 .footer {
     margin-top: 20px;
+    background: #000000;
+    color: black; /* Ensures text is visible */
 }
