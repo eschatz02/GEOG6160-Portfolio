@@ -25,17 +25,19 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; /* Prevents layout breaking on small screens */
+    min-height: 100vh; /* Ensures content fills screen height */
 }
 .sidebar {
     width: 20%;
     padding: 10px;
     background: #ff0000;
+    color: white; /* Fixed visibility issue */
     flex-shrink: 0; /* Prevents sidebar from shrinking */
 }
 .main-content {
     width: 80%;
     padding: 20px;
-    flex-shrink: 0; /* Prevents main content from shrinking */
+    flex: 1; /* Allows main content to expand naturally */
 }
 .image-box {
     width: 200px;
@@ -49,5 +51,5 @@ body {
 .footer {
     margin-top: 20px;
     background: #000000;
-    color: black; /* Ensures text is visible */
+    color: white; /* Fixed visibility issue */
 }
